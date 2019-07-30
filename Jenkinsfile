@@ -4,6 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
+                echo 'The MVN build is successful'
+
             }
         }
     }
