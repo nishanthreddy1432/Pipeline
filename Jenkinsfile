@@ -1,10 +1,11 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('Example') {
-             steps{
-                sh 'make'
+        stage('Build') {
+            steps {
+                sh 'make' 
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
         }
     }
