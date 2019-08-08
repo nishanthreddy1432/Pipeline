@@ -8,6 +8,9 @@ pipeline {
             steps {
                 echo "${params.Greeting} World!"
             }
+            steps{
+                sh 'make'
+            }
         }
     }
 }
